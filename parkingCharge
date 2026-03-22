@@ -1,0 +1,23 @@
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int charge = 0;
+        
+        
+        if(n <= 0){
+            System.out.println("Invalid hours");
+            return;
+        }
+        
+        if(n <= 2){
+             charge = n *100;
+        }else if(n > 2 && n <= 5 ){
+            charge = (2 * 100) + (n -2) * 50;
+        }else if(n > 5){
+            charge = (2*100)+(3 * 50) + (n - 5) * 20;
+        }
+        System.out.println(charge);
+    }
+}
